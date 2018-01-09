@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.abstractFactory.IFactory;
 import com.company.abstractFactory.IProduct;
+import com.company.decorator.Component;
+import com.company.decorator.Decorator;
 import com.company.fectorymethod.AbstractProduct;
 import com.company.fectorymethod.FactoryMethodCreator;
 import com.company.fectorymethod.FruitFactory;
@@ -20,8 +22,20 @@ public class Main {
 //        工厂方法
 //        factoryMethod();
 //        抽象工厂模式
-        abstractFactory();
+//        abstractFactory();
+
+//        装饰模式
+        decorator();
     }
+
+    private static void decorator(){
+        Component component=new Component();
+        component.showMyName();
+        Decorator decorator=new Decorator();
+        decorator.showMyName();
+        decorator.decoratorMethod();
+    }
+
 
     private static void abstractFactory() {
 //
